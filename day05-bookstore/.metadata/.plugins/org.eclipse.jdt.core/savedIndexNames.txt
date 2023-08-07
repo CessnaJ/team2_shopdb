@@ -1,0 +1,16 @@
+INDEX VERSION 1.131+C:\GIT\team2_shopdb\day05-bookstore\.metadata\.plugins\org.eclipse.jdt.core
+1866277067.index
+402502502.index
+2468415394.index
+2424646841.index
+2881058081.index
+2254982786.index
+582715448.index
+4080255401.index
+2696491542.index
+2112246634.index
+395825852.index
+3637761554.index
+2261740156.index
+1930773410.index
+394365637.index
