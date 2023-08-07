@@ -11,8 +11,8 @@ public class Review {
 	private int reviewKey;
 	private int rating;
 	private String comment;
-	private LocalDateTime reviewRegDate; 
-	private LocalDateTime reviewUpdateDate;
+	private String reviewRegDate; 
+	private String reviewUpdateDate;
 	private boolean reviewIsDeleted;
 	
 	private long memberKey;

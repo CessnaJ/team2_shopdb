@@ -1,5 +1,6 @@
 package app.dto;
 
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 import lombok.Builder;
@@ -14,8 +15,8 @@ public class Product {
 	private int price;
 	private String content;
 	private int stock;
-	private LocalDateTime productRegDate;
-	private LocalDateTime productUpdateDate;
+	private String productRegDate;
+	private String productUpdateDate;
 	private double productPoint;
 	private double discountRate;
 	private double salesCount;
@@ -23,5 +24,5 @@ public class Product {
 	
 	private int authorKey;
 	private int publishKey;
-	private int categoryKey;
+	private String categoryKey;
 }
