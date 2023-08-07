@@ -177,3 +177,99 @@
 2023-08-07 17:34:42,312 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
 2023-08-07 17:34:42,312 [Worker-60: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2023-08-07 17:34:42,313 [Worker-60: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:35:20,303 [Worker-58: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:35:20,304 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:35:20,304 [Worker-58: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:35:20,305 [Worker-58: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:44:54,408 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:44:54,410 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:44:54,412 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:44:54,413 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:46:22,824 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:46:22,825 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:46:22,825 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:46:22,826 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:46:27,373 [Worker-63: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:46:27,375 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:46:27,376 [Worker-63: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:46:27,377 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:47:11,686 [Worker-64: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:47:11,687 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:47:11,688 [Worker-64: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:47:11,689 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:47:38,129 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:47:38,130 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:47:38,131 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:47:38,131 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:48:02,332 [Worker-62: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:48:02,333 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:48:02,334 [Worker-62: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:48:02,335 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:48:45,436 [Worker-65: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:48:45,438 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:48:45,440 [Worker-65: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:48:45,441 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:48:51,845 [Worker-64: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:48:51,846 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:48:51,847 [Worker-64: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:48:51,847 [Worker-64: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:49:28,928 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:49:28,929 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:49:28,929 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:49:28,930 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:49:42,541 [Worker-65: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:49:42,542 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:49:42,543 [Worker-65: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:49:42,543 [Worker-65: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:50:12,241 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:50:12,242 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:50:12,243 [Worker-61: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:50:12,244 [Worker-61: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:50:24,988 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:50:24,989 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:50:24,990 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:50:24,991 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:50:36,748 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:50:36,749 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:50:36,749 [Worker-57: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:50:36,750 [Worker-57: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:51:07,176 [Worker-63: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:51:07,178 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:51:07,179 [Worker-63: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:51:07,180 [Worker-63: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:51:13,505 [Worker-62: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:51:13,506 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:51:13,506 [Worker-62: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:51:13,507 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:55:26,749 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:55:26,750 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:55:26,751 [Worker-67: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:55:26,751 [Worker-67: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:55:58,549 [Worker-62: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:55:58,550 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:55:58,551 [Worker-62: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:55:58,552 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:56:24,551 [Worker-66: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:56:24,552 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:56:24,553 [Worker-66: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:56:24,553 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:56:53,685 [Worker-62: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:56:53,686 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:56:53,687 [Worker-62: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:56:53,688 [Worker-62: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 17:58:12,844 [Worker-66: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:58:12,845 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 17:58:12,846 [Worker-66: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 17:58:12,847 [Worker-66: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 18:00:38,598 [Worker-72: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 18:00:38,599 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 18:00:38,601 [Worker-72: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 18:00:38,602 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 18:00:50,125 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 18:00:50,126 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 18:00:50,127 [Worker-68: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 18:00:50,128 [Worker-68: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
+2023-08-07 18:01:08,311 [Worker-69: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 18:01:08,312 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\main\resources
+2023-08-07 18:01:08,313 [Worker-69: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2023-08-07 18:01:08,313 [Worker-69: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Çý°æÀÌ\git\team2_shopdb\day05-bookstore\src\test\resources
