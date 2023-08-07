@@ -3,8 +3,6 @@ package app.product;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
@@ -12,9 +10,10 @@ import java.util.logging.Logger;
 import app.dto.Product;
 import app.frame.ConnectionPool;
 import app.frame.DaoFrame;
+import app.frame.ProductRepository;
 import app.sql.ProductSQL;
 
-public class ProductDaoImpl implements DaoFrame<Long, Product>{
+public class ProductDaoImpl implements ProductRepository<Long, Product>{
 	ConnectionPool cp;
 	Logger log = Logger.getLogger("ProductDaoImpl Test");
 	
@@ -47,7 +46,7 @@ public class ProductDaoImpl implements DaoFrame<Long, Product>{
 			pstmt.setInt(9,  v.getStatus()); 
 			pstmt.setInt(10,  v.getAuthorKey());
 			pstmt.setInt(11,  v.getPublishKey());
-			pstmt.setInt(12,  v.getCategoryKey());
+			pstmt.setString(12,  v.getCategoryKey());
 			
 			result = pstmt.executeUpdate(); //예외는 던지지만 close를 하는게 아니라서 예외를 어떻게 처리할지 여기서 제대로 해줘야함.
 		} catch(Exception e) {
@@ -109,5 +108,6 @@ public class ProductDaoImpl implements DaoFrame<Long, Product>{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 
 }

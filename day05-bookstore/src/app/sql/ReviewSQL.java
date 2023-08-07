@@ -12,7 +12,7 @@ public class ReviewSQL {
 	
 	// ? 들어있는것들 모두 조회
 	public static String ReviewSelectWithBadWords = 
-			"SELECT * FROM REVIEW WHERE content LIKE %?%";
+			"SELECT * FROM REVIEW WHERE comment LIKE ?";
 	
 	//			public static String custSelectAll = 
 	//					"DELETE * FROM cust";

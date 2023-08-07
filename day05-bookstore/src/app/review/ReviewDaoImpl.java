@@ -2,7 +2,10 @@ package app.review;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
@@ -68,11 +71,37 @@ public class ReviewDaoImpl implements ReviewRepository<Integer, Review> {
 		return null;
 	}
 	
-	public List<Review> selectBadReviews() throws Exception {
-		
-		
-		return null;
+
+	@Override
+	public List<Review> selectReviewsWithKeyword(String keyword) throws Exception {
+		Connection con = cp.getConnection();
+		ResultSet result = null;
+		List<Review> list = new ArrayList<>();
+		PreparedStatement pstmt = con.prepareStatement(ReviewSQL.ReviewSelectWithBadWords);
+		try {
+			pstmt.setString(1,  "%" + keyword + "%");
+			result = pstmt.executeQuery();
+			while (result.next()) {
+				Review review = Review.builder()
+						.reviewKey(result.getInt("review_key"))
+						.rating(result.getInt("rating"))
+						.comment(result.getString("comment"))
+						.reviewRegDate(result.getString("review_reg_date"))
+						.reviewUpdateDate(result.getString("review_update_date"))
+						.reviewIsDeleted(result.getBoolean("review_is_deleted"))
+						.memberKey(result.getLong("member_key"))
+						.productKey(result.getLong("product_key"))
+						.build();
+				list.add(review);
+				
+			}
+		} catch(Exception e) {
+			log.info(e.getMessage());
+			throw new Exception("해당 키워드가 있는 리뷰를 검색 중 에러");
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		return list;
 	}
-	
-	
 }

@@ -6,8 +6,8 @@ import app.dto.Category;
 import app.frame.DaoFrame;
 import app.frame.ServiceFrame;
 
-public class CategoryServiceImpl implements ServiceFrame<Integer, Category>{
-	DaoFrame<Integer, Category> dao;
+public class CategoryServiceImpl implements ServiceFrame<String, Category>{
+	DaoFrame<String, Category> dao;
 		
 	public CategoryServiceImpl() {
 		dao = new CategoryDaoImpl();
@@ -26,13 +26,13 @@ public class CategoryServiceImpl implements ServiceFrame<Integer, Category>{
 	}
 
 	@Override
-	public int remove(Integer k) throws Exception {
+	public int remove(String k) throws Exception {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public Category get(Integer k) throws Exception {
+	public Category get(String k) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

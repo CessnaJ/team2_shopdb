@@ -23,5 +23,5 @@ public class Product {
 	
 	private int authorKey;
 	private int publishKey;
-	private int categoryKey;
+	private String categoryKey;
 }

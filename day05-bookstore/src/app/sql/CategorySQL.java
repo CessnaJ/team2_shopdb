@@ -11,4 +11,10 @@ public class CategorySQL {
 	public static String updateCategory = 
 			"UPDATE CATEGORY SET category_key=?, category_name=?, level=?, state=?, is_leaf=? WHERE category_key=?";
 	
+	public static String selectCategory = 
+			"SELECT * FROM CATEGORY WHERE category_key=?";
+	
+	public static String deleteCategory = 
+			"DELETE FROM CATEGORY WHERE category_key=?";
+	
 }
