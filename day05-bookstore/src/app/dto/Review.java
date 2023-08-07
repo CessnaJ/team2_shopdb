@@ -1,7 +1,5 @@
 package app.dto;
 
-import java.time.LocalDateTime;
-
 import lombok.Builder;
 import lombok.Data;
 
@@ -14,7 +12,6 @@ public class Review {
 	private String reviewRegDate; 
 	private String reviewUpdateDate;
 	private boolean reviewIsDeleted;
-	
 	private long memberKey;
 	private long productKey;
 }

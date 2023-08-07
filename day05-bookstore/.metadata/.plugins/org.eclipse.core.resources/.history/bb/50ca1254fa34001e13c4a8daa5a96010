@@ -1,0 +1,16 @@
+package app.dto;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class ProductOrder {
+	private int productOrderCount;
+	private int productPrice;
+	private int productPoint;
+	
+	//	CK
+	private int orderKey;
+	private long productKey;
+}

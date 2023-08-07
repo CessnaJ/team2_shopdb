@@ -1,0 +1,90 @@
+package app.cust;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
+import java.util.logging.Logger;
+
+import app.dto.ProductOrder;
+import app.frame.ConnectionPool;
+import app.frame.DaoFrame;
+import app.frame.ProductOrderSQL;
+
+public class ProductOrderImpl implements DaoFrame<ProductOrderKeys, ProductOrder>{
+	ConnectionPool cp;
+	Logger log = Logger.getLogger("Lombok Test");
+	
+	public ProductOrderImpl() {
+		try {
+			cp = ConnectionPool.create();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public int insert(ProductOrder v) throws Exception {
+		int result = 0;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(ProductOrderSQL.productOrderInsert);
+		
+		try {
+			pstmt.setInt(1,  v.getOrderKey());
+			pstmt.setLong(2,  v.getProductKey());
+			pstmt.setInt(3,  v.getProductOrderCount()); 
+			pstmt.setInt(4, v.getProductPrice());
+			pstmt.setLong(5, v.getProductPoint());
+			result = pstmt.executeUpdate(); 
+		} catch(Exception e) {
+			log.info(e.getMessage());
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		return result;
+	}
+
+
+	@Override
+	public int delete(ProductOrderKeys k) throws Exception {
+		int result = 0;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(ProductOrderSQL.ProductOrderDelete);
+		
+		try {
+			pstmt.setLong(1, k.getProductOrderKey());
+			result = pstmt.executeUpdate(); 
+		} catch(Exception e) {
+			log.info(e.getMessage());
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		
+		return result;
+	}
+
+	@Override
+	public Optional<ProductOrder> select(Integer k, Integer l) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductOrder> select() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	// 쓰이지않음
+	@Override
+	public int update(ProductOrder v) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	
+	
+}

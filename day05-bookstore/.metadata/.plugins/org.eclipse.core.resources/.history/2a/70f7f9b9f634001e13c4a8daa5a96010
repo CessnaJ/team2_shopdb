@@ -1,0 +1,6 @@
+package app.frame;
+
+public class ProductOrderSQL {
+	public static String productOrderInsert = 
+			"INSERT INTO PRODUCTORDER (ORDER_KEY, PRODUCT_KEY, PRODUCT_ORDER_COUNT, PRODUCT_PRICE, PRODUCT_POINT) values(?, ?, ?, ?, ?)";
+}
