@@ -45,6 +45,8 @@ public class Main {
 				} else if (cmd == 2) {
 
 				} else if (cmd == 3) {
+
+				} else if (cmd == 4) {
 					System.out.println("감사합니다, 또 이용해주세요.");
 					break;
 					
