@@ -1,5 +1,5 @@
 //package app.cust;
-//
+// Çª½¬ Å×½ºÆ®
 //import java.sql.Connection;
 //import java.sql.PreparedStatement;
 //import java.sql.ResultSet;
