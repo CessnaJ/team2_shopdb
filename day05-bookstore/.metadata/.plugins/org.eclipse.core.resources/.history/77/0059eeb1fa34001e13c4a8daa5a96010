@@ -1,0 +1,19 @@
+package app.frame;
+
+public class ProductOrderSQL {
+	
+	// 주문이 생성된 이후 만들어지므로 수정은 없음
+	public static String productOrderInsert = 
+			"INSERT INTO PRODUCTORDER (ORDER_KEY, PRODUCT_KEY, PRODUCT_ORDER_COUNT, PRODUCT_PRICE, PRODUCT_POINT) values(?, ?, ?, ?, ?)";
+
+	public static String productOrderSelect = 
+			"SELECT * FROM PRODUCTORDER WHERE ORDER_KEY=? and PRODUCT_KEY=? ";
+	
+	// 주문번호에 해당하는 모든 상품들 불러오기 (총합 구하기 위한 용도)
+	public static String productOrderSelectAll = 
+			"SELECT * FROM PRODUCTORDER WHERE ORDER_KEY = ?";
+	
+	// 주문번호에 해당하는 내역이 개인정보보호법에 의해 삭제되었을 때 상세도 삭제하기 위한 용도
+	public static String productDelete =
+			"DELETE * FROM PRODUCTORDER WHERE ORDER_KEY = ?";
+}

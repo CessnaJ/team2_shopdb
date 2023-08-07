@@ -1,0 +1,11 @@
+package app.cust;
+
+import lombok.Builder;
+import lombok.Data;
+
+@Data
+@Builder
+public class ProductOrderKeys {
+	private long ProductKey;
+	private long OrderKey;
+}

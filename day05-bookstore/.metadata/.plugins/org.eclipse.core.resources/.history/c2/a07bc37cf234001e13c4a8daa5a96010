@@ -1,0 +1,76 @@
+package app.cust;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
+import java.util.logging.Logger;
+
+import app.dto.ProductOrder;
+import app.frame.ConnectionPool;
+import app.frame.DaoFrame;
+import app.frame.SQL;
+
+public class ProductOrderImpl implements DaoFrame<String, ProductOrder>{
+	ConnectionPool cp;
+	Logger log = Logger.getLogger("Lombok Test");
+	
+	public ProductOrderImpl() {
+		try {
+			cp = ConnectionPool.create();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public int insert(ProductOrder v) throws Exception {
+		int result = 0;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(SQL.custInsert);
+		
+		try {
+			pstmt.setInt(1,  v.getProductOrderCount());
+			pstmt.setString(2,  v.getPwd());
+			pstmt.setString(3,  v.getName()); // ? 
+			result = pstmt.executeUpdate(); //예외는 던지지만 close를 하는게 아니라서 예외를 어떻게 처리할지 여기서 제대로 해줘야함.
+		} catch(Exception e) {
+			log.info(e.getMessage());
+			throw new Exception("아이디중복에러");
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		return result;
+			
+		return 0;
+	}
+
+	@Override
+	public int update(ProductOrder v) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Optional<ProductOrder> select(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductOrder> select() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+}

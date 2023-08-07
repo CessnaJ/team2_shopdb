@@ -1,0 +1,137 @@
+package app.cust;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.logging.Logger;
+
+import app.dto.ProductOrder;
+import app.frame.ConnectionPool;
+import app.frame.DaoFrame;
+import app.frame.ProductOrderSQL;
+
+public class ProductOrderDaoImpl implements DaoFrame<ProductOrderKeys, ProductOrder>{
+	ConnectionPool cp;
+	Logger log = Logger.getLogger("Lombok Test");
+	
+	public ProductOrderDaoImpl() {
+		try {
+			cp = ConnectionPool.create();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public int insert(ProductOrder v) throws Exception {
+		int result = 0;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(ProductOrderSQL.productOrderInsert);
+		
+		try {
+			pstmt.setInt(1,  v.getOrderKey());
+			pstmt.setLong(2,  v.getProductKey());
+			pstmt.setInt(3,  v.getProductOrderCount()); 
+			pstmt.setInt(4, v.getProductPrice());
+			pstmt.setLong(5, v.getProductPoint());
+			result = pstmt.executeUpdate(); 
+		} catch(Exception e) {
+			log.info(e.getMessage());
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		return result;
+	}
+
+
+	@Override
+	public int delete(ProductOrderKeys k) throws Exception {
+		int result = 0;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(ProductOrderSQL.productOrderDelete);
+		
+		try {
+			pstmt.setLong(1, k.getOrderKey());
+			result = pstmt.executeUpdate(); 
+		} catch(Exception e) {
+			log.info(e.getMessage());
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		
+		return result;
+	}
+
+	@Override
+	public Optional<ProductOrder> select(ProductOrderKeys k) throws Exception {
+		ProductOrder productOrder = null;
+		ResultSet rset = null;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = null;
+		
+		try {
+			con.prepareStatement(ProductOrderSQL.productOrderSelect);
+			pstmt = con.prepareStatement(SQL.custSelect);
+			pstmt.setLong(1, k.getOrderKey());
+			pstmt.setLong(2, k.getProductKey());
+			rset = pstmt.executeQuery();
+			if(rset.next()) {
+			
+				productOrder = ProductOrder.builder()
+							.productOrderCount(rset.getInt("productOrderCount"))
+							.productPrice(rset.getInt("productPrice"))
+							.productPoint(rset.getInt("productPoint"))
+							.orderKey(rset.getInt("orderKey"))
+							.productKey(rset.getInt("productKey"))
+							.build(); 
+			}
+		} catch(Exception e) {
+			log.info(e.getMessage());
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			DaoFrame.closeRset(rset);
+			cp.releaseConnection(con);
+		}
+		
+		return productOrder;
+	}
+
+	@Override
+	public List<ProductOrder> select() throws Exception {
+		ArrayList<ProductOrder> list = new ArrayList<ProductOrder>();
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		try {
+			pstmt = con.prepareStatement(ProductOrderSQL.productOrderSelectAll);
+			rset = pstmt.executeQuery();
+			rset.next();
+			while(rset.next()) {
+				list.add(ProductOrder.builder()	.productOrderCount(rset.getInt("productOrderCount"))
+						.productPrice(rset.getInt("productPrice"))
+						.productPoint(rset.getInt("productPoint"))
+						.orderKey(rset.getInt("orderKey"))
+						.productKey(rset.getInt("productKey")).build());
+			}
+			return list;
+		} catch(Exception e) {
+			log.info(e.getMessage());
+		}
+		return null;
+	}
+
+	// 쓰이지않음
+	@Override
+	public int update(ProductOrder v) throws Exception {
+		return 1;
+	}
+	
+	
+	
+}
