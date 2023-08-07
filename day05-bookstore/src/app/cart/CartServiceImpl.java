@@ -53,17 +53,16 @@ public class CartServiceImpl implements ServiceFrame<CartUpdate, CartDetail>{
 
 	@Override
 	public List<CartDetail> get() throws Exception {
-		List<CartDetail> result = dao.select();
+		return null;
+	}
+
+	@Override
+	public List<CartDetail> search(CartUpdate k) throws Exception {
+		List<CartDetail> result = dao.search(k);
 		if (result.size() == 0) {
 			throw new Exception("장바구니 전체 조회 - 조회 결과 없음");
 		}
 		return result;
-	}
-
-	@Override
-	public List<CartDetail> search(String k) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override

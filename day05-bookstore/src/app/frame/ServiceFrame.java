@@ -10,7 +10,7 @@ public interface ServiceFrame<K,V> {
 	public int remove(K k) throws Exception;
 	public V get(K k) throws Exception;
 	public List<V> get() throws Exception;
-	public List<V> search(String k) throws Exception;
+	public List<V> search(K k) throws Exception;
 	public List<Review> review(String k) throws Exception;
 }
 
