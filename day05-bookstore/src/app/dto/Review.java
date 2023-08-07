@@ -1,6 +1,6 @@
 package app.dto;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import lombok.Builder;
 import lombok.Data;
@@ -11,10 +11,9 @@ public class Review {
 	private int reviewKey;
 	private int rating;
 	private String comment;
-	private LocalDateTime reviewRegDate; 
-	private LocalDateTime reviewUpdateDate;
+	private Date reviewRegDate; 
+	private Date reviewUpdateDate;
 	private boolean reviewIsDeleted;
-	
 	private long memberKey;
 	private long productKey;
 }
