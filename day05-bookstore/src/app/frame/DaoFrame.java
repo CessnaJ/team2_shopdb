@@ -16,7 +16,7 @@ public interface DaoFrame<K,V> {
 	public int delete(K k) throws Exception;
 	public Optional<V> select(K k) throws Exception;
 	public List<V> select() throws Exception;
-	public List<Product> search(String K) throws Exception;
+	public List<V> search(K K) throws Exception;
 	public List<Review> review(String k) throws Exception;
 	
 	public static void closePstmt(PreparedStatement pstmt) throws Exception {

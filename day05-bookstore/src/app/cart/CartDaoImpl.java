@@ -258,6 +258,11 @@ public class CartDaoImpl implements DaoFrame<CartUpdate, CartDetail> {
 
 	@Override
 	public List<CartDetail> select() throws Exception {
+		return null;
+	}
+
+	@Override
+	public List<CartDetail> search(CartUpdate k) throws Exception {
 		List<CartDetail> detail = new ArrayList<>();
 		Connection con = cp.getConnection();
 		PreparedStatement pstmt = null;
@@ -265,7 +270,7 @@ public class CartDaoImpl implements DaoFrame<CartUpdate, CartDetail> {
 		int cnt = 0;
 		try {
 			pstmt = con.prepareStatement(CartSQL.cartSearchAll);
-			pstmt.setLong(1, 10);
+			pstmt.setLong(1, k.getKey());
 			
 			rset = pstmt.executeQuery();
 
@@ -299,12 +304,6 @@ public class CartDaoImpl implements DaoFrame<CartUpdate, CartDetail> {
 		}
 		
 		return detail;
-	}
-
-	@Override
-	public List<Product> search(String K) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
