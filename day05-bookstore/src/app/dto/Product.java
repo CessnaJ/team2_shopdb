@@ -19,7 +19,7 @@ public class Product {
 	private String productUpdateDate;
 	private double productPoint;
 	private double discountRate;
-	private double salesCount;
+	private long salesCount;
 	private int status;
 	
 	private int authorKey;
