@@ -152,4 +152,32 @@ public class ProductDaoImpl implements DaoFrame<String, Product>{
 		return list;
 	}
 
+
+	@Override
+	public int insert(Product v) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public int update(Product v) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public int delete(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	@Override
+	public Optional<Product> select(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

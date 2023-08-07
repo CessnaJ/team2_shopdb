@@ -8,22 +8,27 @@ import java.util.Optional;
 import app.dto.Product;
 import app.dto.Review;
 
-public interface DaoFrame<K, V> {
-	
-	public List<Product> select() throws Exception;
+// Generic Type(Key, Value)
+public interface DaoFrame<K,V> {
+	// 사항 없으면 0, 있으면 1
+	public int insert(V v) throws Exception;
+	public int update(V v) throws Exception;
+	public int delete(K k) throws Exception;
+	public Optional<V> select(K k) throws Exception;
+	public List<V> select() throws Exception;
 	public List<Product> search(String K) throws Exception;
 	public List<Review> review(String k) throws Exception;
 	
 	public static void closePstmt(PreparedStatement pstmt) throws Exception {
-		if(pstmt != null) {
+		if (pstmt != null) {
 			pstmt.close();
 		}
 	}
 	
 	public static void closeRset(ResultSet rset) throws Exception {
-		if(rset != null) {
+		if (rset != null) {
 			rset.close();
 		}
 	}
-	
 }
+
