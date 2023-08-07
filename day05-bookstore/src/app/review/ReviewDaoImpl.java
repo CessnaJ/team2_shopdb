@@ -104,4 +104,16 @@ public class ReviewDaoImpl implements ReviewRepository<Integer, Review> {
 		}
 		return list;
 	}
+
+	@Override
+	public List<Review> search(Integer K) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Review> review(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -8,6 +8,7 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 import app.dto.Product;
+import app.dto.Review;
 import app.frame.ConnectionPool;
 import app.frame.DaoFrame;
 import app.frame.ProductRepository;
@@ -105,6 +106,20 @@ public class ProductDaoImpl implements ProductRepository<Long, Product>{
 
 	@Override
 	public List<Product> select() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Product> search(Long K) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Review> review(String k) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

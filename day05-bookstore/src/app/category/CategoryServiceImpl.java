@@ -3,6 +3,7 @@ package app.category;
 import java.util.List;
 
 import app.dto.Category;
+import app.dto.Review;
 import app.frame.DaoFrame;
 import app.frame.ServiceFrame;
 
@@ -39,6 +40,20 @@ public class CategoryServiceImpl implements ServiceFrame<String, Category>{
 
 	@Override
 	public List<Category> get() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Category> search(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Review> review(String k) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

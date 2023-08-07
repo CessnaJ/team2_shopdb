@@ -9,6 +9,7 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 import app.dto.Category;
+import app.dto.Review;
 import app.frame.CategoryRepository;
 import app.frame.ConnectionPool;
 import app.frame.DaoFrame;
@@ -169,6 +170,20 @@ public class CategoryDaoImpl implements CategoryRepository<String, Category>{
 
 	@Override
 	public Optional<Category> select(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Category> search(String K) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Review> review(String k) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

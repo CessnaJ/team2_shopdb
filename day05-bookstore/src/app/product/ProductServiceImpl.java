@@ -3,6 +3,7 @@ package app.product;
 import java.util.List;
 
 import app.dto.Product;
+import app.dto.Review;
 import app.frame.DaoFrame;
 import app.frame.ServiceFrame;
 
@@ -39,6 +40,20 @@ public class ProductServiceImpl implements ServiceFrame<Long, Product>{
 
 	@Override
 	public List<Product> get() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Product> search(Long k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Review> review(String k) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
