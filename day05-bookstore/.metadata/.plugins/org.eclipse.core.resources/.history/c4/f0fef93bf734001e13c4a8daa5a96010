@@ -1,0 +1,88 @@
+package app.cust;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
+import java.util.logging.Logger;
+
+import app.dto.ProductOrder;
+import app.frame.ConnectionPool;
+import app.frame.DaoFrame;
+import app.frame.SQL;
+
+public class ProductOrderImpl implements DaoFrame<String, ProductOrder>{
+	ConnectionPool cp;
+	Logger log = Logger.getLogger("Lombok Test");
+	
+	public ProductOrderImpl() {
+		try {
+			cp = ConnectionPool.create();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public int insert(ProductOrder v) throws Exception {
+		int result = 0;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(SQL.productOrderInsert);
+		
+		try {
+			pstmt.setInt(1,  v.getOrderKey());
+			pstmt.setLong(2,  v.getProductKey());
+			pstmt.setInt(3,  v.getProductOrderCount()); 
+			pstmt.setInt(4, v.getProductPrice());
+			pstmt.setLong(5, v.getProductPoint());
+			result = pstmt.executeUpdate(); 
+		} catch(Exception e) {
+			log.info(e.getMessage());
+			throw new Exception("아이디중복에러");
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		return result;
+	}
+
+	@Override
+	public int update(ProductOrder v) throws Exception {
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(SQL.custDelete);
+		try {
+		pstmt.setString(1,  v); // TODO: 고쳐라.
+		result = pstmt.executeUpdate();
+		} catch(Exception e) {
+			log.info(e.getMessage());
+			throw new Exception("뭔가의 이유로 삭제가 안되었음.");
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		// TODO Auto-generated method stub
+		return result;
+	}
+
+	@Override
+	public int delete(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Optional<ProductOrder> select(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ProductOrder> select() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	
+	
+}
