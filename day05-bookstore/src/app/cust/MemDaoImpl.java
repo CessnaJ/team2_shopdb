@@ -9,6 +9,7 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 import app.dto.Member;
+import app.dto.Review;
 import app.frame.ConnectionPool;
 import app.frame.DaoFrame;
 import app.frame.MemSQL;
@@ -47,7 +48,7 @@ public class MemDaoImpl implements DaoFrame<Long, Member>{
 			result = pstmt.executeUpdate();
 		}catch(Exception e) {
 			log.info(e.getMessage());
-			throw new Exception("¾ÆÀÌµð Áßº¹ ¿¡·¯");
+			throw new Exception("ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ßºï¿½ ï¿½ï¿½ï¿½ï¿½");
 		}finally {
 			DaoFrame.closePstmt(pstmt);
 			cp.releaseConnection(con);
@@ -95,7 +96,7 @@ public class MemDaoImpl implements DaoFrame<Long, Member>{
 			}
 		}catch(Exception e) {
 			log.info(e.getMessage());
-			throw new Exception("Á¶È¸ ¿¡·¯.");
+			throw new Exception("ï¿½ï¿½È¸ ï¿½ï¿½ï¿½ï¿½.");
 		}finally {
 			DaoFrame.closeRset(rset);
 			DaoFrame.closePstmt(pstmt);
@@ -106,6 +107,18 @@ public class MemDaoImpl implements DaoFrame<Long, Member>{
 
 	@Override
 	public List<Member> select() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Member> search(Long K) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Review> review(String k) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

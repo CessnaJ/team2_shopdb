@@ -40,5 +40,17 @@ public class ReviewServiceImpl implements ServiceFrame<Integer, Review>{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<Review> search(Integer k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Review> review(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }

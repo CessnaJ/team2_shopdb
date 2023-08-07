@@ -37,7 +37,7 @@ public class ReviewInsertTest {
 		Review inputReview = Review.builder()
 				.reviewKey(14)
 				.rating(4)
-				.comment("ÁÁ¾Æ¿ä ¸¸Á·ÇÕ´Ï´Ù")
+				.comment("ë§¤ìš° ë§ˆìŒì— ë“¤ì–´ìš” ")
 				.reviewIsDeleted(false)
 				.memberKey(1)
 				.productKey(2)

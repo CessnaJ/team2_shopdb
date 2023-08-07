@@ -30,7 +30,7 @@ public class MemInsertTest {
 				.hashed_pwd("qwer")
 				.memberName("abc")
 				.memberImgurl("https://lotteon/user/profile/img/abc.jpg")
-				.address("¼­¿ï½Ã °­µ¿±¸")
+				.address("ì„œìš¸ì‹œ ì†¡íŒŒêµ¬")
 				.memberPoint(0)
 				.isDormant(false)
 				.isAdmin(false)

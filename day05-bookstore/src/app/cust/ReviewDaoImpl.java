@@ -42,7 +42,7 @@ public class ReviewDaoImpl implements DaoFrame<Integer, Review>{
 			result = pstmt.executeUpdate();
 		}catch(Exception e) {
 			log.info(e.getMessage());
-			throw new Exception("¸®ºä Áßº¹ ¿¡·¯");
+			throw new Exception("ï¿½ï¿½ï¿½ï¿½ ï¿½ßºï¿½ ï¿½ï¿½ï¿½ï¿½");
 		}finally {
 			DaoFrame.closePstmt(pstmt);
 			cp.releaseConnection(con);
@@ -71,7 +71,7 @@ public class ReviewDaoImpl implements DaoFrame<Integer, Review>{
 			
 		}catch(Exception e) {
 			log.info(e.getMessage());
-			throw new Exception("»èÁ¦ ¿¡·¯.");
+			throw new Exception("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.");
 		}finally {
 			DaoFrame.closePstmt(pstmt);
 			cp.releaseConnection(con);
@@ -87,6 +87,18 @@ public class ReviewDaoImpl implements DaoFrame<Integer, Review>{
 
 	@Override
 	public List<Review> select() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Review> search(Integer K) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Review> review(String k) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}
