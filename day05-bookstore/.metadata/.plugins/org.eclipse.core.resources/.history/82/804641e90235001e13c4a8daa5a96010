@@ -1,0 +1,6 @@
+package app.frame;
+
+public class OrderSQL {
+	public static String OrderInsert = "INSERT INTO `ORDER`(ORDER_STATE, STREET_ADDR, ORDER_PHONE, MEMBER_KEY) values( 0, "¼­¿ï½Ã123", "01012345678", 1); "
+			
+}

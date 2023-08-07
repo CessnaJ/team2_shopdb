@@ -1,0 +1,10 @@
+package app.cust;
+
+import app.dto.Order;
+import app.frame.ServiceFrame;
+
+public class OrderServiceImpl implements ServiceFrame<String, Order>{
+	 
+	DaoFrame<String, Order> dao;
+
+}

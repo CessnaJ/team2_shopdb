@@ -1,0 +1,123 @@
+package app.cust;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
+import java.util.logging.Logger;
+
+import app.dto.Order;
+import app.frame.ConnectionPool;
+import app.frame.DaoFrame;
+import app.frame.OrderSQL;
+import app.frame.ProductOrderSQL;
+
+public class OrderDaoImpl implements DaoFrame<Integer, Order> {
+	ConnectionPool cp;
+	Logger log = Logger.getLogger("Lombok Test");
+	
+	public OrderDaoImpl() {
+		try {
+			cp = ConnectionPool.create();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public int insert(Order v) throws Exception {
+		int result = 0;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(OrderSQL.OrderInsert);
+		
+		try {
+			pstmt.setInt(1,  v.getOrderState());
+			pstmt.setString(2,  v.getStreetAddr());
+			pstmt.setString(3,  v.getOrderPhone()); 
+			pstmt.setLong(4, v.getMemberKey());
+			result = pstmt.executeUpdate(); 
+		} catch(Exception e) {
+			log.info(e.getMessage());
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		return result;
+	}
+
+	@Override
+	public int update(Order v) throws Exception {
+		int result = 0;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(OrderSQL.OrderUpdate);
+		try {
+			pstmt.setInt(1,  v.getOrderState()); // TODO: 고쳐라.
+			pstmt.setLong(2, v.getOrderKey());
+			result = pstmt.executeUpdate();
+		} catch(Exception e) {
+			log.info(e.getMessage());
+			throw new Exception("뭔가의 이유로 UPDATE 안되었음.");
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		// TODO Auto-generated method stub
+		return result;	
+		}
+
+	@Override
+	public int delete(Integer k) throws Exception {
+		int result = 0;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = con.prepareStatement(OrderSQL.OrderDelete);
+		
+		try {
+			pstmt.setLong(1, k);
+			result = pstmt.executeUpdate(); 
+		} catch(Exception e) {
+			log.info(e.getMessage());
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		return result;
+	}
+
+	@Override
+	public Optional<Order> select(Integer k) throws Exception {
+		Order order = null;
+		Connection con = cp.getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		try {
+			pstmt = con.prepareStatement(OrderSQL.OrderSelect);
+			pstmt.setInt(1, k);
+			rset = pstmt.executeQuery();
+			if (rset.next()) { // 한칸을 전진시키고 데이터를 끄집어 내야한다.
+			
+				order = Order.builder()
+							.id(rset.getString("id"))
+							.pwd(rset.getString("pwd"))
+							.name(rset.getString("name"))
+							.build(); 
+			}
+			
+		} catch(Exception e) {
+			log.info(e.getMessage());
+			throw new Exception("아이디중복에러");
+		} finally {
+			DaoFrame.closePstmt(pstmt);
+			cp.releaseConnection(con);
+		}
+		return result;
+		
+	}
+
+	@Override
+	public List<Order> select() throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

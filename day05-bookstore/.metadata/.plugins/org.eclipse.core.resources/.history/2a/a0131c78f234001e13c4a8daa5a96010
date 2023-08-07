@@ -1,0 +1,20 @@
+package app.cust;
+
+import java.util.logging.Logger;
+
+import app.frame.ConnectionPool;
+
+public class ProductOrderImpl implements <String, ProductOrder>{
+	ConnectionPool cp;
+	Logger log = Logger.getLogger("Lombok Test");
+	
+	public ProductOrderImpl() {
+		try {
+			cp = ConnectionPool.create();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}

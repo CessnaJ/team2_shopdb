@@ -11,6 +11,8 @@ import java.util.logging.Logger;
 
 import app.dto.CartDetail;
 import app.dto.CartUpdate;
+import app.dto.Product;
+import app.dto.Review;
 import app.frame.CartSQL;
 import app.frame.ConnectionPool;
 import app.frame.DaoFrame;
@@ -297,6 +299,18 @@ public class CartDaoImpl implements DaoFrame<CartUpdate, CartDetail> {
 		}
 		
 		return detail;
+	}
+
+	@Override
+	public List<Product> search(String K) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Review> review(String k) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
