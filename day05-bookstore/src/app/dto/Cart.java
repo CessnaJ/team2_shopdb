@@ -10,6 +10,7 @@ import lombok.Data;
 public class Cart {
 	private long cartId;
 	private int productOrderCount;
+	private boolean cartState;
 	private LocalDateTime regDate;
 	private long memberKey;
 	private long productKey;
