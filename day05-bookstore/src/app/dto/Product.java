@@ -14,11 +14,11 @@ public class Product {
 	private int price;
 	private String content;
 	private int stock;
-	private LocalDateTime productRegDate;
-	private LocalDateTime productUpdateDate;
+	private String productRegDate;
+	private String productUpdateDate;
 	private double productPoint;
 	private double discountRate;
-	private double salesCount;
+	private long salesCount;
 	private int status;
 	
 	private int authorKey;
