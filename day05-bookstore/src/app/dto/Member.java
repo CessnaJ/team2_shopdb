@@ -1,6 +1,6 @@
 package app.dto;
 
-import java.time.LocalDateTime;
+import java.sql.Date;
 
 import lombok.Builder;
 import lombok.Data;
@@ -15,7 +15,7 @@ public class Member {
 	private String memberImgurl;
 	private String address;
 	private int memberPoint;
-	private LocalDateTime memberRegDate; // 확인 필요.
+	private Date memberRegDate; // 확인 필요.
 	private boolean isDormant;
 	private boolean isAdmin;
 	private String memberPhone;
