@@ -1,4 +1,4 @@
-package app.frame;
+package app.sql;
 
 import java.sql.PreparedStatement;
 
@@ -27,7 +27,10 @@ public class CartSQL {
 	// 장바구니 상품 수량 변경
 	public static String cartChangeCount = 
 			"UPDATE `CART` SET product_order_count = ? WHERE cart_id = ?";
-	
+	// 주문 총 금액
+	public static String cartTotalPrice = 
+			"SELECT * FROM `PRODUCTORDER` WHERE order_key = ?";
+		
 	// 구매
 	// 장바구니 상태 변경
 	public static String cartBuyStep1 = 

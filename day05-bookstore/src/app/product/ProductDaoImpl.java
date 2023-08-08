@@ -65,10 +65,11 @@ public class ProductDaoImpl implements ProductRepository<Long, Product>{
 		// TODO Auto-generated method stub
 		int result = 0;
 		Connection con = cp.getConnection();
-		PreparedStatement pstmt = con.prepareStatement(ProductSQL.productUpdateContent);
+		PreparedStatement pstmt = con.prepareStatement(ProductSQL.productUpdateSalesCountStock);
 		try {
-			pstmt.setString(1,  v.getContent());
-			pstmt.setLong(2,  v.getProductKey());
+			pstmt.setInt(1,  v.getStock());
+			pstmt.setLong(2,  v.getSalesCount());
+			pstmt.setLong(3,  v.getProductKey());
 			result = pstmt.executeUpdate();
 		} catch(Exception e) {
 			log.info(e.getMessage());

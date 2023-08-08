@@ -13,9 +13,9 @@ import app.dto.CartDetail;
 import app.dto.CartUpdate;
 import app.dto.Product;
 import app.dto.Review;
-import app.frame.CartSQL;
 import app.frame.ConnectionPool;
 import app.frame.DaoFrame;
+import app.sql.CartSQL;
 
 public class CartDaoImpl implements DaoFrame<CartUpdate, CartDetail> {
 
@@ -50,7 +50,10 @@ public class CartDaoImpl implements DaoFrame<CartUpdate, CartDetail> {
 				rset = outOfStock.executeQuery();
 				rset.next();
 				int stock = rset.getInt("stock");
-				if (stock < v.getProductOrderCount()) throw new Exception("장바구니 에러 - 재고 없음");
+				if (stock < v.getProductOrderCount()) {
+					DaoFrame.closePstmt(outOfStock);
+					throw new Exception("장바구니 에러 - 재고 없음");
+				}
 				
 				// 장바구니에 담을 상품을 판매하고 있지 않은 경우
 				PreparedStatement invalidProduct = con.prepareStatement(CartSQL.invalidProduct);
@@ -58,7 +61,10 @@ public class CartDaoImpl implements DaoFrame<CartUpdate, CartDetail> {
 				rset = invalidProduct.executeQuery();
 				rset.next();
 				int status = rset.getInt("status");
-				if (status == 2) throw new Exception("장바구니 에러 - 판매 중단 상품");
+				if (status == 2) {
+					DaoFrame.closePstmt(invalidProduct);
+					throw new Exception("장바구니 에러 - 판매 중단 상품");
+				}
 				
 				pstmt = con.prepareStatement(CartSQL.cartAdd);
 				pstmt.setInt(1, v.getProductOrderCount());
@@ -98,6 +104,7 @@ public class CartDaoImpl implements DaoFrame<CartUpdate, CartDetail> {
 				// 장바구니에 담을 상품을 판매하고 있지 않은 경우
 				PreparedStatement invalidProduct = con.prepareStatement(CartSQL.invalidProduct);
 				invalidProduct.setLong(1, v.getProductKey());
+				
 				rset = invalidProduct.executeQuery();
 				rset.next();
 				int status = rset.getInt("status");
@@ -108,9 +115,22 @@ public class CartDaoImpl implements DaoFrame<CartUpdate, CartDetail> {
 				pstmt.setLong(2, v.getOrderKey());
 				pstmt.setLong(3, v.getProductKey());
 				
+				result = pstmt.executeUpdate();
+				
 			} catch(Exception e) {
 				log.info(e.getMessage());
 			} finally {
+				PreparedStatement totalstmt = con.prepareStatement(CartSQL.cartTotalPrice);
+				
+				int totalPrice = 0;
+				totalstmt.setLong(1, v.getOrderKey());
+				rset = totalstmt.executeQuery();
+				while (rset.next()) {
+					totalPrice += rset.getInt("product_price") * rset.getInt("product_order_count");
+				}
+				log.info("Total Price: " + totalPrice + "원");
+				
+				DaoFrame.closePstmt(totalstmt);
 				DaoFrame.closePstmt(pstmt);
 				cp.releaseConnection(con);
 			}
