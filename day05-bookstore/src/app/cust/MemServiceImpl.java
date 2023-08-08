@@ -8,8 +8,8 @@ import app.dto.Review;
 import app.frame.DaoFrame;
 import app.frame.ServiceFrame;
 
-public class MemServiceImpl implements ServiceFrame<Long, Member>{
-	DaoFrame<Long, Member> dao;
+public class MemServiceImpl implements ServiceFrame<Member, Member>{
+	DaoFrame<Member, Member> dao;
 	
 	public MemServiceImpl() {
 		dao = new MemDaoImpl();
@@ -27,13 +27,13 @@ public class MemServiceImpl implements ServiceFrame<Long, Member>{
 	}
 
 	@Override
-	public int remove(Long k) throws Exception {
+	public int remove(Member k) throws Exception {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public Member get(Long k) throws Exception {
+	public Member get(Member k) throws Exception {
 		Optional<Member> result = dao.select(k);
 		if(result.isEmpty()) {
 			throw new Exception("��ȸ�����̾���");
@@ -48,7 +48,7 @@ public class MemServiceImpl implements ServiceFrame<Long, Member>{
 	}
 
 	@Override
-	public List<Member> search(Long k) throws Exception {
+	public List<Member> search(Member k) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -15,7 +15,7 @@ import app.frame.ServiceFrame;
 public class MemSelectTest {
 	Logger log = Logger.getLogger("MemberTest");
 	
-	ServiceFrame<Long, Member> service;
+	ServiceFrame<Member, Member> service;
 	
 	@BeforeEach
 	void before() throws Exception{
@@ -25,10 +25,15 @@ public class MemSelectTest {
 	@DisplayName("Member Select Test")
 	@Test
 	void select() throws Exception{
-		Member mem = null;
-		mem = service.get((long) 1);
-		log.info(mem.toString());
-		assertEquals("Test Error", mem.getMemberKey(), (long) 1);
+		Member mem = Member.builder()
+		.email("hong@gmail.com")
+		.hashed_pwd("qwer")
+		.build();
+		
+		Member findMem = service.get(mem);
+		log.info(findMem.toString());
+		
+		assertEquals("Test Error", findMem.getMemberKey(), (long) 2);
 		
 	}
 }
