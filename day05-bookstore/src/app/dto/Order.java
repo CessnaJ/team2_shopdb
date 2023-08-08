@@ -1,6 +1,7 @@
 package app.dto;
 
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import lombok.Builder;
 import lombok.Data;
@@ -10,9 +11,7 @@ import lombok.Data;
 public class Order {
 	private long orderKey;
 	private int orderState;
-	private LocalDateTime orderDate;
-	private int orderTotalPoint;
-	private int orderTotalPrice;
+	private Date orderDate;
 	private String streetAddr;
 	private String orderPhone;
 	

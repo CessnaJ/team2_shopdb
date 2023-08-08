@@ -1,0 +1,10 @@
+package app.frame;
+
+public class OrderSQL {
+	public static String OrderInsert = "INSERT INTO `ORDER`(ORDER_STATE, STREET_ADDR, ORDER_PHONE, MEMBER_KEY) values (0, ?, ?, ?); ";
+
+	public static String OrderSelect = "SELECT * FROM `ORDER` WHERE MEMBER_KEY=?";
+
+	public static String OrderUpdate = "UPDATE `ORDER` SET ORDER_STATE = ? WHERE ORDER_KEY= ?;";
+
+}
