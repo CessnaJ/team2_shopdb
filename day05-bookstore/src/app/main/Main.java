@@ -43,7 +43,7 @@ public class Main {
 					mi.register(inputMem);
 					
 				} else if (cmd == 2) {
-
+					
 				} else if (cmd == 3) {
 
 				} else if (cmd == 4) {

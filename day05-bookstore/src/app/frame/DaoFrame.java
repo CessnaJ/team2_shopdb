@@ -5,12 +5,13 @@ import java.sql.ResultSet;
 import java.util.List;
 import java.util.Optional;
 
+import app.dto.Member;
 import app.dto.Product;
 import app.dto.Review;
 
 // Generic Type(Key, Value)
 public interface DaoFrame<K,V> {
-	// »çÇ× ¾øÀ¸¸é 0, ÀÖÀ¸¸é 1
+	// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 0, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1
 	public int insert(V v) throws Exception;
 	public int update(V v) throws Exception;
 	public int delete(K k) throws Exception;

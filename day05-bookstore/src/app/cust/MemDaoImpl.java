@@ -14,7 +14,7 @@ import app.frame.ConnectionPool;
 import app.frame.DaoFrame;
 import app.frame.MemSQL;
 
-public class MemDaoImpl implements DaoFrame<Long, Member>{
+public class MemDaoImpl implements DaoFrame<Member, Member>{
 	Logger log = Logger.getLogger("CustDaoImpl");
 	ConnectionPool cp;
 	
@@ -64,20 +64,21 @@ public class MemDaoImpl implements DaoFrame<Long, Member>{
 	}
 
 	@Override
-	public int delete(Long k) throws Exception {
+	public int delete(Member k) throws Exception {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public Optional<Member> select(Long k) throws Exception {
+	public Optional<Member> select(Member k) throws Exception {
 		Member mem = null;
 		Connection con = cp.getConnection();
 		PreparedStatement pstmt = null; 
 		ResultSet rset = null;
 		try {
 			pstmt = con.prepareStatement(MemSQL.memSelect);
-			pstmt.setLong(1, k);
+			pstmt.setString(1, k.getEmail());
+			pstmt.setString(2, k.getHashed_pwd());
 			
 			rset = pstmt.executeQuery();
 			if(rset.next()) {
@@ -112,7 +113,7 @@ public class MemDaoImpl implements DaoFrame<Long, Member>{
 	}
 
 	@Override
-	public List<Member> search(Long K) throws Exception {
+	public List<Member> search(Member K) throws Exception {
 		// TODO Auto-generated method stub
 		return null;
 	}

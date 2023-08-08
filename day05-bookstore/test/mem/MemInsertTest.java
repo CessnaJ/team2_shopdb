@@ -1,7 +1,5 @@
 package mem;
 
-import static org.junit.Assert.assertEquals;
-
 import java.util.logging.Logger;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -15,7 +13,7 @@ import app.frame.ServiceFrame;
 public class MemInsertTest {
 	Logger log = Logger.getLogger("MemTest");
 	
-	ServiceFrame<Long, Member> service;
+	ServiceFrame<Member, Member> service;
 	
 	@BeforeEach
 	void before() throws Exception{
